@@ -1,5 +1,5 @@
-from .base import DumpServiceInterface
+from .base import UploadDumpServiceInterface
 
 __all__ = [
-    "DumpServiceInterface"
+    "UploadDumpServiceInterface"
 ]

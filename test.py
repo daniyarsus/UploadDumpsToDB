@@ -4,7 +4,7 @@ import json
 import uuid
 from datetime import datetime
 
-# Sample JSON data
+# Пример JSON данных
 sample_json = {
     "id": "344423",
     "name": "Шкаф коммутационный ЦМО ШРН-М-12.650.1 настенный,  металлическая передняя дверь,  12U,  600x650 мм",
@@ -34,64 +34,86 @@ sample_json = {
     ]
 }
 
-
 async def insert_data(json_data):
-    # Connect to the database
+    # Подключение к базе данных
     conn = await asyncpg.connect(
         user='admin_user',
-        password='your_password',  # Update with actual password
+        password='your_password',  # Обновите с вашим паролем
         database='main',
         host='localhost'
     )
 
     try:
-        # Extract necessary data
+        # Извлечение необходимых данных
         product_id = json_data["id"]
         title = json_data["name"]
         images = json_data["images"]
         brand = json_data["brand"]
         category_id = int(json_data["category"]["id"])
 
-        # Assume the first variation contains the relevant pricing details
+        # Предполагаем, что первая вариация содержит необходимые детали о ценах
         variation = json_data["variations"][0]
         price_after_discounts = float(variation["price"])
         price_before_discounts = float(variation["msrp"])
         discount = price_before_discounts - price_after_discounts
-        inventory = int(variation["inventory"])
+        sales = int(variation["inventory"])
         first_image_url = variation["image"]
         is_available = variation["isAvailable"]
 
-        # Generate a UUID for the new SKU
+        # Генерация UUID для нового SKU
         sku_uuid = uuid.uuid4()
 
-        # Set some of the default fields
-        marketplace_id = 1  # Assuming '1' is a placeholder; adjust based on actual marketplace data
-        currency = 'RUB'  # Assuming Russian rubles
+        # Установка некоторых полей по умолчанию
+        marketplace_id = 1  # Предполагаем, что '1' это временное значение; обновите по необходимости
+        currency = 'RUB'  # Предполагаем, что валюта рубли
         status = 'available' if is_available else 'unavailable'
         inserted_at = datetime.now()
         updated_at = datetime.now()
+        description = ""
+        seller_id = ""
+        seller_name = ""
+        category_lvl_1 = ""
+        category_lvl_2 = ""
+        category_lvl_3 = ""
+        category_remaining = ""
+        features = json.dumps({})
+        rating_count = 0
+        rating_value = 0.0
+        bonuses = 0
+        referral_url = ""
+        barcode = ""
+        original_url = ""
+        mpn = ""
+        revenue = 0.0
 
-        # Insert data into the `sku` table
+        # Вставка данных в таблицу `sku` используя параметризованные запросы
         await conn.execute('''
             INSERT INTO public.sku(
-                uuid, marketplace_id, product_id, title, brand, first_image_url,
-                category_id, price_before_discounts, price_after_discounts, 
-                discount, sales, inserted_at, updated_at, currency, images, status
-            ) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
-        ''',
-        sku_uuid, marketplace_id, product_id, title, brand, first_image_url,
-        category_id, price_before_discounts, price_after_discounts, discount,
-        inventory, inserted_at, updated_at, currency, images, status
-        )
+                uuid, marketplace_id, product_id, title, description, brand, 
+                seller_id, seller_name, first_image_url, category_id, 
+                category_lvl_1, category_lvl_2, category_lvl_3, category_remaining, 
+                features, rating_count, rating_value, price_before_discounts, 
+                discount, price_after_discounts, bonuses, sales, inserted_at, 
+                updated_at, currency, referral_url, barcode, original_url, mpn, 
+                status, revenue, images, last_seen_at
+            ) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, 
+                      $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, 
+                      $29, $30, $31, $32, $33, $34)
+        ''', sku_uuid, marketplace_id, product_id, title, description, brand,
+           seller_id, seller_name, first_image_url, category_id,
+           category_lvl_1, category_lvl_2, category_lvl_3, category_remaining,
+           features, rating_count, rating_value, price_before_discounts,
+           discount, price_after_discounts, bonuses, sales, inserted_at,
+           updated_at, currency, referral_url, barcode, original_url, mpn,
+           status, revenue, images, datetime.now())
 
         print(f"Inserted SKU with UUID: {sku_uuid}")
 
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        # Close the connection
+        # Закрытие соединения
         await conn.close()
 
-
-# Run the insert function
+# Запуск функции вставки данных
 asyncio.run(insert_data(sample_json))
