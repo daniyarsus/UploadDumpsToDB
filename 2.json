@@ -1,0 +1,52 @@
+{
+  "id": "1777222212",
+  "name": "Подставка ИКЕА БЕРГЕНЕС, бамбук",
+  "images": [
+    "//avatars.mds.yandex.net/get-mpic/5254781/img_id4545903996225159655.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/4709279/img_id6652889807071224762.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1864685/img_id557773901730989507.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1961245/img_id2720013198854360786.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/4880383/img_id7368858344676910635.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/5320546/img_id6820019036498103172.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/5167413/img_id6759976317512652639.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1642819/img_id1406620731021403489.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1808939/img_id8132472089868180448.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1680954/img_id8495193536989697920.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/3916156/img_id5912380435667508953.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/7150287/img_id6325042010503699961.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/4372959/img_id2760417468299407111.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/4252138/img_id5044518981291693689.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1912105/img_id934487005082670307.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/5376414/img_id2278470998049867953.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1860966/img_id4755811800624690740.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/4383514/img_id8115480767067536048.jpeg/900x1200",
+    "//avatars.mds.yandex.net/get-mpic/1687058/img_id5789274437028295210.jpeg/900x1200"
+  ],
+  "brand": "ИКЕА",
+  "brandId": "10676504",
+  "inventory": 5169,
+  "category": {
+    "id": "26894070",
+    "path": [
+      "26894070"
+    ]
+  },
+  "variations": [
+    {
+      "id": "101853641742",
+      "inventory": 5169,
+      "image": "//avatars.mds.yandex.net/get-mpic/5254781/img_id4545903996225159655.jpeg/900x1200",
+      "offers": [
+        {
+          "id": "0wcvN2hxoy_jGganzkL54g",
+          "wallet": 361,
+          "price": 365,
+          "msrp": 365,
+          "inventory": 5169,
+          "merchantId": "465852"
+        }
+      ]
+    }
+  ],
+  "rating": 4.9
+}

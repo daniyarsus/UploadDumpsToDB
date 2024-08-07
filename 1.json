@@ -1,0 +1,28 @@
+{
+  "id": "344423",
+  "name": "Шкаф коммутационный ЦМО ШРН-М-12.650.1 настенный,  металлическая передняя дверь,  12U,  600x650 мм",
+  "images": [
+    "https://cdn.citilink.ru/VIyEcriqskiM5pRBYIZnQiRPxqwr9RAfu9bzE8KB0kw/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v01_b.jpg",
+    "https://cdn.citilink.ru/fLtY80Y5B4BEcslMkb-QK4vdBTKTsQeSBxXjQIdIKX0/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v02_b.jpg",
+    "https://cdn.citilink.ru/AQZWosgVFJo6igjwVRytZtBGNJrCfTeWN_-Rh4nA8Eg/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v03_b.jpg",
+    "https://cdn.citilink.ru/MyXIDyBpje61g4QUZy1k0T2O1EDXRZJ6YBhQ57o76qA/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v04_b.jpg",
+    "https://cdn.citilink.ru/v58sE_Xlh3MOSTdoTIjpXvaK6cBidbcNNvlWFSab_cs/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v05_b.jpg",
+    "https://cdn.citilink.ru/g4SnJEVkOosOYcSC0cOTyiREnMTPezDwo-V5F25uVtk/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v06_b.jpg",
+    "https://cdn.citilink.ru/vSa3a8tl65VvR48hoebGIGeRL5weQQjXzzNkudFhj4A/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v07_b.jpg"
+  ],
+  "brand": "ЦМО",
+  "category": {
+    "id": "1010"
+  },
+  "variations": [
+    {
+      "id": "344423",
+      "price": 19230,
+      "msrp": 19230,
+      "inventory": 1,
+      "image": "https://cdn.citilink.ru/VIyEcriqskiM5pRBYIZnQiRPxqwr9RAfu9bzE8KB0kw/gravity:sm/height:900/resizing_type:fit/width:900/plain/items/344423_v01_b.jpg",
+      "promo": 17970,
+      "isAvailable": true
+    }
+  ]
+}
