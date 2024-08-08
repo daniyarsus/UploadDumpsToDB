@@ -4,5 +4,5 @@ from typing import NoReturn
 
 class PostgresSkuRepositoryInterface(ABC):
     @abstractmethod
-    async def upload_data(self, data: dict) -> NoReturn:
+    async def upload_data(self, dto: dict[str, str]) -> NoReturn:
         ...
