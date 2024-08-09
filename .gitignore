@@ -1,0 +1,8 @@
+.idea
+idea
+.venv
+venv
+__pycache__
+
+dump_beru_product_20240717.1409052128.jsonl
+dump_citilink_product_20240717.1353588029.jsonl
